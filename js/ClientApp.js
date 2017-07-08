@@ -15,9 +15,10 @@ var AdditionComponent = (props) => {
 }
 
 var MediumComponent = () => {
-    return glorp('div', { className: 'greeting' },
+    return glorp('div', null,
         glorp(TitleComponent, { title: 'Wuthering Heights' }),
         glorp(AdditionComponent, { num1: 5, num2: 6 }),
+
     );
 }
 
