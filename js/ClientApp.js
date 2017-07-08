@@ -3,7 +3,7 @@
 // please include a title
 var TitleComponent = (props) => {
     return glorp('div', null,
-        glorp('h1', null, props.title)
+        glorp('h1', { style: { color: props.color }}, props.title)
     );
 }
 
@@ -16,7 +16,7 @@ var AdditionComponent = (props) => {
 
 var MediumComponent = () => {
     return glorp('div', null,
-        glorp(TitleComponent, { title: 'Wuthering Heights' }),
+        glorp(TitleComponent, { title: 'Wuthering Heights', color: 'rebeccapurple' }),
         glorp(AdditionComponent, { num1: 5, num2: 6 }),
 
     );
