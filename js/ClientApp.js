@@ -1,19 +1,21 @@
-﻿var LilComponent = () => {
-    return React.createElement('div', null,
-        React.createElement('h1', null, 'Hello, this is the smallest component. Look how we reproduce!')
+﻿var glorp = React.createElement;
+
+var LilComponent = () => {
+    return glorp('div', null,
+        glorp('h1', null, 'we\'re glorping')
     );
 }
 
 var MediumComponent = () => {
-    return React.createElement('div', { className: 'greeting' },
-        React.createElement(LilComponent, null),
-        React.createElement(LilComponent, null),
-        React.createElement(LilComponent, null),
-        React.createElement(LilComponent, null)
+    return glorp('div', { className: 'greeting' },
+        glorp(LilComponent, null),
+        glorp(LilComponent, null),
+        glorp(LilComponent, null),
+        glorp(LilComponent, null)
     );
 }
 
 ReactDOM.render(
-    React.createElement(MediumComponent),
+    glorp(MediumComponent),
     document.getElementById('app')
 );
